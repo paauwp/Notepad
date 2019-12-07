@@ -10,7 +10,7 @@ import os
 # Create the Notepad Class
 class Notepad:
     root = Tk()
-    root.wm_iconbitmap("notepad.ico")
+    #root.wm_iconbitmap("Users/HP/Documenten/notepad.ico")
     root.title("Untitled - Notepad")
     root.geometry("700x400")
     TextArea = Text(root, font = ("arial, 15"))
@@ -22,7 +22,7 @@ class Notepad:
     Scrollbar = Scrollbar(TextArea)
     file = None
     
-    def __init(self):
+    def __init__(self):
         # Text Area resizable
         self.root.grid_rowconfigure(0, weight = 1)
         self.root.grid_columnconfigure(0, weight = 1)
@@ -55,8 +55,8 @@ class Notepad:
         self.Scrollbar.config(command=self.TextArea.yview)
         self.TextArea.config(yscrollcommand = self.Scrollbar.set)
 
-        def run(self):
-            self.root.mainloop()
+    def run(self):
+        self.root.mainloop()
 
-        notepad = Notepad()
-        notepad.run()
+notepad = Notepad()
+notepad.run()
